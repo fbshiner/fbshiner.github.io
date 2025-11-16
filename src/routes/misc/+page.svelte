@@ -1,8 +1,6 @@
 <script>
     let {data} = $props();
-    import Grid from "$lib/components/Grid.svelte";
+    import Category from "$lib/components/Category.svelte"
 </script>
 
-<h1>misc</h1>
-
-<Grid data={data} cwd={"misc"}></Grid>
+<Category data={data} cwd="misc"></Category>

@@ -2,6 +2,16 @@
     let {data, cwd} = $props();
 
     import Grid from "$lib/components/Grid.svelte";
+    function r(start, end) {
+        return (Math.random() * (end - start)) + start;
+    }
+
+    const h = r(0, 360);
+    const s = r(35, 100);
+    const v = r(50, 75);
+
+    const mainColor = `hsl(${h}deg ${s}% ${v}%);`;
+    const complementaryColor = `hsl(${(h + 180) % 360}deg ${s}% ${v}%);`;
 </script>
 
 <style>
@@ -10,9 +20,9 @@
 }
 </style>
 
-<div class="inner" style={`rgb(${r(0, 255)}, ${r(0, 255)}, ${r(0, 255)});`}>
+<div class="inner" style={`background-color: ${mainColor}`}>
 <h1>{cwd}</h1>
 
 <!-- definitely a better way to do this other than cwd as a prop -->
-<Grid data={data} cwd={cwd}></Grid>
+<Grid data={data} cwd={cwd} borderColor={complementaryColor}></Grid>
 </div>
