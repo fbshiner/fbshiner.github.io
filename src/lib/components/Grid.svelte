@@ -1,7 +1,7 @@
 <script>
     import Page from "../../routes/+page.svelte";
 
-    let {data, cwd} = $props();
+    let {data, cwd, borderColor} = $props();
     // import { data } from "$lib/components/data.js"
 
     let setBrightness = (id, brightness) => {
@@ -77,9 +77,9 @@
         <!-- todo: make this routing dynamic depending on subfolder -->
         <!-- use enhanced:img here and pass as a param like in Entry/(knitting/[slug])? -->
         {#if cwd ==="knitting"}
-            <a href="./{cwd}/{slug}"><img src={knittingModules[`/src/lib/assets/ravelry/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test"/></a>
+            <a href="./{cwd}/{slug}"><img src={knittingModules[`/src/lib/assets/ravelry/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
         {:else}
-            <a href="./{cwd}/{slug}"><img src={otherModules[`/src/lib/assets/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test"/></a>
+            <a href="./{cwd}/{slug}"><img src={otherModules[`/src/lib/assets/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
         {/if}
         <br>
             {title}
