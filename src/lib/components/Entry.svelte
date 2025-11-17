@@ -82,6 +82,10 @@
         .textRightAlign {
             float: right;
         }
+
+        h1 {
+            font-size: 1px;
+        }
         
     }
 
