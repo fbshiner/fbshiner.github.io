@@ -60,8 +60,7 @@
     /* MOBILE CSS */
     @media only screen and (max-width: 600px) {
         .image-container {
-            width: 25%;
-            height: auto;
+            width: 33%;
         }
 
         .imageLeftAlign {
@@ -82,14 +81,6 @@
 
         .textRightAlign {
             float: right;
-        }
-
-        img{
-            width: 10%;
-        }
-
-        h1 {
-            font-size: 1px;
         }
         
     }
