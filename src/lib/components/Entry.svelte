@@ -110,9 +110,11 @@
     <img src={image} style={`border: solid ${r(3, 10)}px ${complementaryColor};`} alt="Placeholder"/>
  </div>
 
-    <div class={["text-container", (imageAlign? "textLeftAlign" : "textRightAlign")]}>
+<div class={["text-container", (imageAlign? "textLeftAlign" : "textRightAlign")]}>
+    {#if description !== "test"}
         {description}
-    </div>
+    {/if}
+</div>
 
 </div>
 </div>
