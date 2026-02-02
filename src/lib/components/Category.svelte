@@ -17,12 +17,16 @@
 <style>
 .inner {
     width: 100%;
+    height: 100%;
+    height: 100vw;
 }
 </style>
 
+<!-- <body style={`background-color: ${mainColor}`}> -->
 <div class="inner" style={`background-color: ${mainColor}`}>
-<h1>{cwd}</h1>
+    <h1>{cwd}</h1>
 
-<!-- definitely a better way to do this other than cwd as a prop -->
-<Grid data={data} cwd={cwd} borderColor={complementaryColor}></Grid>
+    <!-- definitely a better way to do this other than cwd as a prop -->
+    <Grid data={data} cwd={cwd} borderColor={complementaryColor}></Grid>
 </div>
+<!-- </body> -->

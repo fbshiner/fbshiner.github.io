@@ -12,23 +12,36 @@
     
     let index = 0;
 
-    const indices = [0, 1, 2, 3];
+    const indices = [0, 1, 2];
 </script>
 
 <style>
+    :global(body) {
+        max-height: 100%;
+        overflow: hidden;
+    }
+
     h1 {
         text-align: center;
     }
 
     .navbar {
+        background-color: brown;
         text-align: center;
-        border: 1px solid;
     }
 
     .navbar a {
         padding-left: 5%;
         padding-right: 5%;
         font-size: larger;
+        color: #000;
+        transform: scale(1.0);
+        transition: all 0.8s ease 
+    }
+
+    .navbar a:hover {
+        transform: scale(1.1);
+        transition: all 0.8s ease 
     }
 
     .flex-container {
@@ -38,6 +51,8 @@
         /* align-content: flex-start; */
         align-content: stretch;
         justify-content: space-evenly;
+        max-height: 100%;
+        overflow: hidden;
 
     }
 
@@ -61,7 +76,7 @@
     <h1> FRANKIES WORLD </h1>
 
     <div class="welcome" style="text-align: center;">
-        <h2>welcome text</h2>
+        <h2>welcome :)</h2>
     </div>
 
     <!-- TODO: make each image get bigger when you hover over them? Use grid.svelte for example -->
