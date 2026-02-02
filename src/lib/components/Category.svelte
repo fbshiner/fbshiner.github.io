@@ -15,6 +15,11 @@
 </script>
 
 <style>
+global(body) {
+  max-width: none;
+  overflow: auto;
+}
+
 .inner {
     width: 100%;
     height: 100%;
