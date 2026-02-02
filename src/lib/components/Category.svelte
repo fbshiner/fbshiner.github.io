@@ -49,8 +49,7 @@
 
 @media only screen and (min-width: 500px) {
     .category-header {
-        padding-top: 2%;
-        padding-left: 3.5%;
+        text-align: left;
         padding-bottom: 2%;
     }
 }
