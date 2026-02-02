@@ -90,13 +90,12 @@
 
     <!-- TODO: make each image get bigger when you hover over them? Use grid.svelte for example -->
     <!-- <Image src="src/lib/assets/ravelry/poppop_dagrun_luggar.jpg" alt="test"></Image> -->
-    {#each indices as index} 
-    <!-- just repeating this pattern for background texture -->
     <div class="flex-container">
-    {#each imageUrls as imageUrl}
-        <Image src={imageUrl} alt="Test"></Image>
-    {/each}
+        {#each indices as index} 
+            {#each imageUrls as imageUrl}
+                <Image src={imageUrl} alt="Test"></Image>
+            {/each}
+        {/each}
     </div>
-    {/each}
 </div>
 </div>
