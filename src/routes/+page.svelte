@@ -1,5 +1,6 @@
 <script>
     import Image from "$lib/components/Image.svelte";
+    import {onMount} from 'svelte';
     // access all images in directory, put in an array, pick a random (10-20) amount of photos from the entire directory
     const imageModules = import.meta.glob("../lib/assets/ravelry/*.{png,jpeg,jpg}", {
         eager: true,
@@ -16,9 +17,16 @@
 </script>
 
 <style>
-    :global(body) {
+    .fullscreen-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         max-height: 100%;
+        background-color: #a52a2a;
         overflow: hidden;
+        box-sizing: border-box;
     }
 
     h1 {
@@ -26,7 +34,7 @@
     }
 
     .navbar {
-        background-color: brown;
+        background-color: #a52a2a;
         text-align: center;
     }
 
@@ -65,6 +73,7 @@
 
 </style>
 
+<div class="fullscreen-container">
 <div class="navbar">
     <a href="./knitting">knitting</a>
     <a href="./music">music</a>
@@ -89,4 +98,5 @@
     {/each}
     </div>
     {/each}
+</div>
 </div>

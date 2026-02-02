@@ -1,7 +1,9 @@
 <script>
+    import Grid from "$lib/components/Grid.svelte";
+    import {onMount} from 'svelte';
+
     let {data, cwd} = $props();
 
-    import Grid from "$lib/components/Grid.svelte";
     function r(start, end) {
         return (Math.random() * (end - start)) + start;
     }
@@ -12,16 +14,34 @@
 
     const mainColor = `hsl(${h}deg ${s}% ${v}%);`;
     const complementaryColor = `hsl(${(h + 180) % 360}deg ${s}% ${v}%);`;
+
+    onMount(() => {
+        const sc = Array.from(document.getElementsByClassName("fullscreen-container"))[0];
+        sc.style.backgroundColor = mainColor;
+    });
 </script>
 
 <style>
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
 .inner {
     width: 100%;
     height: 100%;
-    height: 100vw;
+    position: relative;
+    overflow-y: auto;
 }
 </style>
 
+<div class="fullscreen-container">
 <!-- <body style={`background-color: ${mainColor}`}> -->
 <div class="inner" style={`background-color: ${mainColor}`}>
     <h1>{cwd}</h1>
@@ -30,3 +50,4 @@
     <Grid data={data} cwd={cwd} borderColor={complementaryColor}></Grid>
 </div>
 <!-- </body> -->
+</div>
