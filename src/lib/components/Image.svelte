@@ -22,4 +22,4 @@
 </style>
 <!-- height: ${r(50, 500)}px; --> 
  <!-- goal: make image particles -->
-<img src={src} style={`width: ${r(5, 50)}px; margin-left: ${r(-50, 50)}px; opacity: ${r(0.25, 0.75)}; filter:brightness(${r(50, 150)}%); border:solid ${r(1, 10)}px rgb(${r(0, 255)}, ${r(0, 255)}, ${r(0, 255)}); z-index:${r(-50, -1)};`} alt={altText}/>
+<img src={src} style={`width: ${r(15, 70)}px; margin-left: ${r(-50, 50)}px; opacity: ${r(0.25, 0.75)}; filter:brightness(${r(50, 150)}%); border:solid ${r(1, 10)}px rgb(${r(0, 255)}, ${r(0, 255)}, ${r(0, 255)}); z-index:${r(-50, -1)};`} alt={altText}/>
