@@ -13,7 +13,7 @@
     
     let index = 0;
 
-    const indices = [0, 1, 2];
+    const indices = [0, 1]; // maybe try [0, 1]
 </script>
 
 <style>
