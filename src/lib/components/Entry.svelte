@@ -111,7 +111,7 @@
  </div>
 
 <div class={["text-container", (imageAlign? "textLeftAlign" : "textRightAlign")]}>
-    {#if description !== "test"}
+    {#if description && description !== "test"}
         {description}
     {/if}
 </div>
