@@ -28,13 +28,6 @@
         display: flex;
         align-content: stretch;
         flex-wrap: wrap;
-        /* display: grid;
-        width: 100%;
-        grid-template-columns: repeat(6, 15%);
-        align-items: center; */
-        /* grid-auto-rows: 200px;
-        grid-auto-columns: 200px; */
-        /* width: 100%; */
     }
 
     .grid img {
@@ -44,7 +37,6 @@
     .cell {
         text-align: center;
         flex: 1;
-        /* filter: brightness(100%); */
     }
 
     img {
@@ -55,6 +47,12 @@
         cursor: pointer;
         filter: brightness(50%);
         transition: ease 0.3s all;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .cell {
+            padding-bottom: 2.5%;
+        }
     }
 </style>
 

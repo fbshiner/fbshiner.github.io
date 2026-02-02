@@ -43,6 +43,7 @@
 @media only screen and (max-width: 500px) {
     .category-header {
         text-align: center;
+        padding-bottom: 1%;
     }
 }
 </style>
