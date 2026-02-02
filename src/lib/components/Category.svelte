@@ -16,8 +16,8 @@
 
 <style>
 global(body) {
-  max-width: none;
-  overflow: auto;
+  max-height: none;
+  overflow: visible;
 }
 
 .inner {
