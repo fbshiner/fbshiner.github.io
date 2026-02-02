@@ -34,6 +34,8 @@
     }
 
     .navbar {
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
         background-color: #a52a2a;
         text-align: center;
     }
