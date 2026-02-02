@@ -28,6 +28,7 @@
         display: flex;
         align-content: stretch;
         flex-wrap: wrap;
+        align-items: center;
     }
 
     .grid img {
@@ -37,6 +38,7 @@
     .cell {
         text-align: center;
         flex: 1;
+        padding-bottom: 5%;
     }
 
     img {
@@ -54,6 +56,7 @@
             padding-bottom: 5%;
         }
     }
+
 </style>
 
 <div class="grid">

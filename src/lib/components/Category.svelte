@@ -46,6 +46,14 @@
         padding-bottom: 5%;
     }
 }
+
+@media only screen and (min-width: 500px) {
+    .category-header {
+        padding-top: 2%;
+        padding-left: 3.5%;
+        padding-bottom: 2%;
+    }
+}
 </style>
 
 <div class="fullscreen-container">
