@@ -50,12 +50,12 @@
 
 </style>
 
-    <div class="navbar">
-        <a href="./knitting">knitting</a>
-        <a href="./music">music</a>
-        <a href="./spinning">spinning</a>
-        <a href="./misc">misc</a>
-    </div>
+<div class="navbar">
+    <a href="./knitting">knitting</a>
+    <a href="./music">music</a>
+    <a href="./spinning">spinning</a>
+    <a href="./misc">misc</a>
+</div>
 
 <div class="page">
     <h1> FRANKIES WORLD </h1>
