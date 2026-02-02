@@ -51,7 +51,7 @@
 
     @media only screen and (max-width: 500px) {
         .cell {
-            padding-bottom: 2.5%;
+            padding-bottom: 5%;
         }
     }
 </style>
