@@ -15,7 +15,7 @@
 </script>
 
 <style>
-global(body) {
+:global(body) {
   max-height: none;
   overflow: visible;
 }
