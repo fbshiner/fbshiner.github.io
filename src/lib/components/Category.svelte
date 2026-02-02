@@ -39,12 +39,18 @@
     position: relative;
     overflow-y: auto;
 }
+
+@media only screen and (max-width: 500px) {
+    .category-header {
+        text-align: center;
+    }
+}
 </style>
 
 <div class="fullscreen-container">
 <!-- <body style={`background-color: ${mainColor}`}> -->
 <div class="inner" style={`background-color: ${mainColor}`}>
-    <h1>{cwd}</h1>
+    <h1 class="category-header">{cwd}</h1>
 
     <!-- definitely a better way to do this other than cwd as a prop -->
     <Grid data={data} cwd={cwd} borderColor={complementaryColor}></Grid>
