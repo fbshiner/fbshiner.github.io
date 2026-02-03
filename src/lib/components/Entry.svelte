@@ -19,7 +19,7 @@
 <style>
 
     /* DESKTOP CSS */
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 500px) {
         .image-container {
             width: 33%;
         }
@@ -54,7 +54,7 @@
     }
 
     /* MOBILE CSS */
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 500px) {
         .image-container {
             width: 33%;
         }
@@ -94,10 +94,13 @@
     h1 {
         text-align: center;
     }
+
     .page-container {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
         display: flex;
         align-items: center;
+        justify-content: space-evenly;
     }
 
 </style>
