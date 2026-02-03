@@ -1,6 +1,7 @@
 <script>
     // the way to go about this is, in your given display grid, you get the import 
-    let { image, title, description } = $props();
+    let { PageContext } = $props();
+    console.log(PageContext);
 
     // const imageRightAlign = Math.random() > 0.5;
     const imageAlign = Math.random() > 0.5;
@@ -103,16 +104,27 @@
 
 <!-- has slug, title, img_src -- needs desc? -->
 <div style={`height: 100vh; background-color:${mainColor};`}>
-  <h1>{title}</h1>
+  <h1>{PageContext.title}</h1>
 <div class="page-container" >
 
  <div class={["image-container", (imageAlign? "imageRightAlign": "imageLeftAlign")]}>
-    <img src={image} style={`border: solid ${r(3, 10)}px ${complementaryColor};`} alt="Placeholder"/>
+    <img src={PageContext.image} style={`border: solid ${r(3, 10)}px ${complementaryColor};`} alt="Placeholder"/>
  </div>
 
 <div class={["text-container", (imageAlign? "textLeftAlign" : "textRightAlign")]}>
-    {#if description && description !== "test"}
-        {description}
+    {#if PageContext.description && PageContext.description !== "test"}
+        {PageContext.description}
+    {/if}
+
+    {#if PageContext.link}
+        <a href={PageContext.link}>
+            {#if PageContext.linkText}
+                {PageContext.linkText}
+            {:else}
+                Link
+            {/if}
+
+        </a>
     {/if}
 </div>
 

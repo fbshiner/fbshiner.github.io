@@ -14,6 +14,11 @@
     const srcInfo = data.post.src.split(".");
     const path = `/src/lib/assets/${srcInfo[0]}.${srcInfo[1]}`;
     
+    const pageContext = {
+        "image": images[path],
+        "title": title,
+        "description": description
+    }
 </script>
 <!-- description and image of proj -->
-<Entry image={images[path]} title={title} description={description}> </Entry>
+<Entry PageContext={pageContext}></Entry>
