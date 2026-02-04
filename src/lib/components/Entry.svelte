@@ -107,6 +107,46 @@
 
 
     /* ========================================================================================================== */
+    @media only screen and (max-width: 500px) {
+        .image-and-description {
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (min-width: 500px) {
+        .image-and-description {
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            align-items: center;
+            text-align: center;
+        }
+
+        .entry-imageLeftAlign {
+            order: 0;
+        }
+
+        .entry-imageRightAlign {
+            order: 1;
+        }   
+
+        .entry-textLeftAlign {
+            order: 0;
+        }
+
+        .entry-textRightAlign {
+            order: 1;
+        }
+    }
+
     .fullscreen-container {
         position: fixed;
         top: 0;
@@ -133,16 +173,6 @@
         text-align: center;
     }
 
-    .image-and-description {
-        width: 100%;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        align-items: center;
-        text-align: center;
-    }
-
     .link-and-player {
         width: 100%;
 
@@ -151,22 +181,6 @@
         grid-template-columns: auto;
         text-align: center;
         align-items: center;
-    }
-
-    .entry-imageLeftAlign {
-        order: 0;
-    }
-
-    .entry-imageRightAlign {
-        order: 1;
-    }   
-
-    .entry-textLeftAlign {
-        order: 0;
-    }
-
-    .entry-textRightAlign {
-        order: 1;
     }
 </style>
 
