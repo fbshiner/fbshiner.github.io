@@ -117,6 +117,11 @@
             align-items: center;
             text-align: center;
         }
+
+        img {
+            max-width: 55%;
+            height: auto;
+        }
     }
 
     @media only screen and (min-width: 500px) {
@@ -145,6 +150,16 @@
         .entry-textRightAlign {
             order: 1;
         }
+
+        img {
+            max-width: 40%;
+            height: auto;
+        }
+
+        /* .entry-image {
+            max-width: 55%;
+            height: auto;
+        } */
     }
 
     .fullscreen-container {
