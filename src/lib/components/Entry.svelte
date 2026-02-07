@@ -38,7 +38,7 @@
         }
 
         img {
-            max-width: 55%;
+            max-width: 100%;
             height: auto;
         }
     }
