@@ -71,7 +71,7 @@
         }
 
         img {
-            max-width: 40%;
+            max-width: 100%;
             height: auto;
         }
     }
@@ -91,7 +91,7 @@
         margin: 0 auto;
 
         display: grid;
-        grid-template-rows: 1fr 7fr 2fr;
+        grid-template-rows: 1fr 6fr 3fr;
         grid-template-columns: auto;
     }
 
@@ -107,7 +107,11 @@
         grid-template-rows: 1fr 1fr;
         grid-template-columns: auto;
         text-align: center;
-        align-items: center;
+        align-items: flex-start;
+    }
+
+    audio {
+        filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
     }
 </style>
 
