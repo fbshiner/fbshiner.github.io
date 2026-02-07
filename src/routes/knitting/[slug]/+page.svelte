@@ -3,7 +3,7 @@
     
     let {data} = $props();
 
-    const images = import.meta.glob("$lib/assets/ravelry/*.{png,jpeg,jpg}", {
+    const images = import.meta.glob("$lib/assets/knitting/*.{png,jpeg,jpg}", {
         eager: true,
         import: 'default'
     });
@@ -12,7 +12,7 @@
     const description = data.post.description;
 
     const srcInfo = data.post.src.split(".");
-    const path = `/src/lib/assets/ravelry/${srcInfo[0]}.${srcInfo[1]}`;
+    const path = `/src/lib/assets/knitting/${srcInfo[0]}.${srcInfo[1]}`;
 
     const pageContext = {
         "image": images[path],

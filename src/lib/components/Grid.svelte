@@ -8,18 +8,34 @@
         document.getElementById(id).style.filter = `brightness(${brightness}%)`
     };
 
-    const knittingModules = import.meta.glob("$lib/assets/ravelry/*.{png,jpeg,jpg}", {
-            eager: true,
-            import: 'default'
-        });
-    const otherModules = import.meta.glob("$lib/assets/*.{png,jpeg,jpg}", {
-            eager: true,
-            import: 'default'
-        });
-
-    // const path = `/src/lib/assets/ravelry/${srcInfo[0]}.${srcInfo[1]}`;
-
-
+    // have to do this because import.meta.glob only accepts string literals
+    let modules = $state(null);
+    switch(cwd){
+        case "knitting":
+            modules = import.meta.glob("$lib/assets/knitting/*.{png,jpeg,jpg}", {
+                eager: true,
+                import: 'default'
+            });
+            break;
+        case "music":
+            modules = import.meta.glob("$lib/assets/music/*.{png,jpeg,jpg}", {
+                eager: true,
+                import: 'default'
+            });
+            break;
+        case "spinning":
+            modules = import.meta.glob("$lib/assets/spinning/*.{png,jpeg,jpg}", {
+                eager: true,
+                import: 'default'
+            });
+            break;
+        case "misc":
+            modules = import.meta.glob("$lib/assets/misc/*.{png,jpeg,jpg}", {
+                eager: true,
+                import: 'default'
+            });
+            break;
+    }
 </script>
 
 <style>
@@ -77,10 +93,14 @@
         }}>            
         <!-- todo: make this routing dynamic depending on subfolder -->
         <!-- use enhanced:img here and pass as a param like in Entry/(knitting/[slug])? -->
-        {#if cwd ==="knitting"}
-            <a href="./{cwd}/{slug}"><img src={knittingModules[`/src/lib/assets/ravelry/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
-        {:else}
-            <a href="./{cwd}/{slug}"><img src={otherModules[`/src/lib/assets/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
+        {#if cwd === "knitting"}
+            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/knitting/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
+        {:else if cwd === "music"}
+            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/music/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
+        {:else if cwd === "spinning"}
+            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/spinning/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
+        {:else if cwd === "misc"}
+            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/misc/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
         {/if}
         <br>
             {title}

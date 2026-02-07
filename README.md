@@ -3,7 +3,7 @@
 ## Photos
 
 ### Adding
-Images for each category are stored in src > lib > assets, with knitting photos being stored in the ravelry folder and other photos being stored in the assets folder itself
+Images for each category are stored in src > lib > assets, with knitting photos being stored in the knitting folder and other photos being stored in the assets folder itself
 
 ### Linking
 For each category (located in `src/routes/{category}`), there exists a file `data.js`, with entries like

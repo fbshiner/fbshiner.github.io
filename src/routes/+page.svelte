@@ -2,7 +2,7 @@
     import Image from "$lib/components/Image.svelte";
     import {onMount} from 'svelte';
     // access all images in directory, put in an array, pick a random (10-20) amount of photos from the entire directory
-    const imageModules = import.meta.glob("../lib/assets/ravelry/*.{png,jpeg,jpg}", {
+    const imageModules = import.meta.glob("../lib/assets/knitting/*.{png,jpeg,jpg}", {
         eager: true,
         query: '?url', 
         import: 'default'
@@ -91,7 +91,6 @@
     </div>
 
     <!-- TODO: make each image get bigger when you hover over them? Use grid.svelte for example -->
-    <!-- <Image src="src/lib/assets/ravelry/poppop_dagrun_luggar.jpg" alt="test"></Image> -->
     <div class="flex-container">
         {#each indices as index} 
             {#each imageUrls as imageUrl}

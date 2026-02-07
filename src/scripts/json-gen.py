@@ -2,7 +2,7 @@ import json
 import os
 
 def generateJSON():
-    path = "C://Users//Jeff//Desktop//CS//frankie-site//src//lib//assets//ravelry"
+    path = "C://Users//Jeff//Desktop//CS//frankie-site//src//lib//assets//knitting"
     dir_list = os.listdir(path)
     # print(dir_list)
 
