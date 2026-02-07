@@ -13,7 +13,8 @@ export const posts = [
     "src": "test.png",
     "description": "Test Description",
     "link": "https://soundcloud.com",
-    "linkText": "Link text test"
+    "linkText": "Link text test",
+    "musicFile": "s-test.mp3",
    }
 
 ]

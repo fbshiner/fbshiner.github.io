@@ -1,7 +1,7 @@
 <script>
     // the way to go about this is, in your given display grid, you get the import 
     let { PageContext } = $props();
-    console.log(PageContext);
+    // console.log(PageContext);
 
     // const imageRightAlign = Math.random() > 0.5;
     const imageAlign = Math.random() > 0.5;
@@ -17,94 +17,9 @@
 </script>
 
 <style>
-
-    /* DESKTOP CSS */
-    @media only screen and (min-width: 500px) {
-        /* .image-container {
-            width: 33%;
-        }
-
-        .imageLeftAlign {
-            order: 0;
-            margin-right: auto;
-            padding-left: 15%;    
-        }
-
-        .imageRightAlign {
-            order: 1;
-            margin-left: auto;
-            padding-right: 15%;
-        }
-
-        .text-container {
-            width: 33%;
-        }
-
-        .textLeftAlign {
-            order: 0;
-            margin-right: auto;
-            padding-left: 15%;
-        }
-
-        .textRightAlign {
-            order: 1;
-            margin-left: auto;
-            padding-right: 15%;
-        } */
-    }
-
-    /* MOBILE CSS */
-    @media only screen and (max-width: 500px) {
-        /* .image-container {
-            width: 33%;
-        }
-
-        .imageLeftAlign {
-            order: 0;
-            margin-right: auto;
-        }
-
-        .text-container {
-            width: 33%;
-        }
-
-        .textRightAlign {
-            order: 1;
-            margin-left: auto;
-            padding-right: 15%;
-        }
-        
-        
-        .textLeftAlign {
-            order: 0;
-            width: 100%;
-            margin-right: auto;
-            padding-left: 15%;
-        }
-
-        .imageRightAlign {
-            order: 1;
-            width: 100%;
-            margin-left: auto;
-            padding-right: 15%;
-        } */
-    }
-
     h1 {
         text-align: center;
     }
-
-    /* .page-container {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    } */
-
-
-
-
 
     /* ========================================================================================================== */
     @media only screen and (max-width: 500px) {
@@ -159,11 +74,6 @@
             max-width: 40%;
             height: auto;
         }
-
-        /* .entry-image {
-            max-width: 55%;
-            height: auto;
-        } */
     }
 
     .fullscreen-container {
@@ -172,8 +82,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        /* max-height: 100%; */
-        /* overflow: hidden; */
         box-sizing: border-box;
     }
 

@@ -7,5 +7,13 @@ export const posts = [
         "description": "Description"
     },
     */
+   {
+    "slug": "test",
+    "title": "Test Title",
+    "src": "test.png",
+    "description": "Test Description",
+    "link": "https://soundcloud.com",
+    "linkText": "Link text test"
+   }
 
 ]

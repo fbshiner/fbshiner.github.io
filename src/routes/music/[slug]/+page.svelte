@@ -3,7 +3,7 @@
     
     let {data} = $props();
 
-    const images = import.meta.glob("$lib/assets/*.{png,jpeg,jpg}", {
+    const images = import.meta.glob("$lib/assets/music/*.{png,jpeg,jpg}", {
         eager: true,
         import: 'default'
     });
@@ -14,14 +14,16 @@
     const linkText = data.post.linkText;
 
     const srcInfo = data.post.src.split(".");
-    const path = `/src/lib/assets/${srcInfo[0]}.${srcInfo[1]}`;
+    const path = `/src/lib/assets/music/${srcInfo[0]}.${srcInfo[1]}`;
+    const musicPath = `/src/lib/assets/music/${data.post.musicFile}`;
 
     const pageContext = {
         "image": images[path],
         "title": title,
         "description": description,
         "link": link,
-        "linkText": linkText
+        "linkText": linkText,
+        "musicFile": musicPath,
     }
     
 </script>
