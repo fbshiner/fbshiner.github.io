@@ -71,6 +71,11 @@
         .cell {
             padding-bottom: 5%;
         }
+
+        img {
+            max-width: 90%;
+            height: auto;
+        }
     }
 
 </style>
