@@ -69,12 +69,15 @@
 
     @media only screen and (max-width: 500px) {
         .cell {
+            max-width: 90%;
+            height: auto;
+            margin: 0 auto;
             padding-bottom: 5%;
+            /* overflow: hidden; */
         }
 
         img {
-            max-width: 90%;
-            height: auto;
+            max-width: 90vw;
         }
     }
 
