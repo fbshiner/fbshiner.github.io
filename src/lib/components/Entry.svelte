@@ -70,10 +70,10 @@
             order: 1;
         }
 
-        img {
+        /* img {
             max-width: 100%;
             height: auto;
-        }
+        } */
     }
 
     .fullscreen-container {
