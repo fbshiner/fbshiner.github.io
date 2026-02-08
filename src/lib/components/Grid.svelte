@@ -67,6 +67,10 @@
         transition: ease 0.3s all;
     }
 
+    .grid-title {
+        /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    }
+
     @media only screen and (max-width: 500px) {
         .cell {
             max-width: 90%;
@@ -77,6 +81,7 @@
         }
 
         img {
+            min-width: 100%;
             max-width: 90vw;
         }
     }
@@ -111,7 +116,7 @@
             <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/misc/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
         {/if}
         <br>
-            {title}
+            <div class="grid-title"><b>{title}</b></div>
         </div>
     {/each}
 </div>

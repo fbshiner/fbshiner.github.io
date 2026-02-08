@@ -30,10 +30,16 @@
     }
 
     h1 {
+        /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
         text-align: center;
     }
 
+    h2 {
+        /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    }
+
     .navbar {
+        /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
         padding-top: 0.5%;
         padding-bottom: 0.5%;
         background-color: #a52a2a;
