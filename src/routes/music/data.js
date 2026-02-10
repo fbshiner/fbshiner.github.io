@@ -11,14 +11,5 @@ export const posts = [
         "musicFile": "music.mp3", // optional, provides an audio player at the bottom of the screen
     },
     */
-   {
-    "slug": "test",
-    "title": "Test Title",
-    "src": "test.png",
-    "description": "Test Description",
-    "link": "https://soundcloud.com",
-    "linkText": "Link text test",
-    "musicFile": "s-test.mp3",
-   }
 
 ]
