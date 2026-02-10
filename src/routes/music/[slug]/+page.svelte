@@ -24,6 +24,8 @@
     const musicInfo = data.post.musicFile.split(".");
     const musicPath = `/src/lib/assets/music/${musicInfo[0]}.${musicInfo[1]}`;
 
+    const altText = data.post.alt;
+
     const pageContext = {
         "image": images[path],
         "title": title,
@@ -31,6 +33,7 @@
         "link": link,
         "linkText": linkText,
         "musicFile": musicFiles[musicPath],
+        "alt": altText,
     }
     
 </script>

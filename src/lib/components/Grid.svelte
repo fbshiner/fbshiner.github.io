@@ -97,7 +97,7 @@
     {/each} -->
 
 
-    {#each data.summaries as {slug, title, src}}
+    {#each data.summaries as {slug, title, src, alt}}
         <div class="cell" id={title} style="filter: brightness(100%);" onmouseenter={()=> {
             // setBrightness(title, 50);
         }}
@@ -107,13 +107,13 @@
         <!-- todo: make this routing dynamic depending on subfolder -->
         <!-- use enhanced:img here and pass as a param like in Entry/(knitting/[slug])? -->
         {#if cwd === "knitting"}
-            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/knitting/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
+            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/knitting/${src.split(".")[0]}.${src.split(".")[1]}`]} alt={alt?alt:"alt text not found"} style={`border: 3px solid ${borderColor}`}/></a>
         {:else if cwd === "music"}
-            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/music/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
+            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/music/${src.split(".")[0]}.${src.split(".")[1]}`]} alt={alt?alt:"alt text not found"} style={`border: 3px solid ${borderColor}`}/></a>
         {:else if cwd === "spinning"}
-            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/spinning/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
+            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/spinning/${src.split(".")[0]}.${src.split(".")[1]}`]} alt={alt?alt:"alt text not found"} style={`border: 3px solid ${borderColor}`}/></a>
         {:else if cwd === "misc"}
-            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/misc/${src.split(".")[0]}.${src.split(".")[1]}`]} alt="test" style={`border: 3px solid ${borderColor}`}/></a>
+            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/misc/${src.split(".")[0]}.${src.split(".")[1]}`]} alt={alt?alt:"alt text not found"} style={`border: 3px solid ${borderColor}`}/></a>
         {/if}
         <br>
             <div class="grid-title"><b>{title}</b></div>

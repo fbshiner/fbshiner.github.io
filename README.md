@@ -12,6 +12,7 @@ For each category (located in `src/routes/{category}`), there exists a file `dat
         "title": "Image Title",
         "src": "name_of_image_in_assets.jpg", // could also be png or jpeg
         "description": "Description",
+        "alt": "alt text for image",
         "link": "link.com", // optional, shows a link
         "linkText": "Text you click on to access the link", // optional, if not filed and out there is a link, the default text is "link"
         "musicFile": "music.mp3", // optional, provides an audio player at the bottom of the screen
@@ -19,6 +20,8 @@ For each category (located in `src/routes/{category}`), there exists a file `dat
 
 You can add new images in that format anywhere in the `data.js` file, just make sure there is a , before the { and after the }. You can check 
 src/routes/knitting/data.js for an example of how this data is formatted in sequence.
+
+Note: I wrote alt text for all of the knitting entries, but I'm pretty inexperienced with knitting and writing alt text. I think it's a pretty good first pass, but could definitely be improved upon.
 
 ## Text
 

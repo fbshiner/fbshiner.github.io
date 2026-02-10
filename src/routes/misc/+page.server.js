@@ -5,7 +5,8 @@ export function load() {
         summaries: posts.map((post) => ({
             slug: post.slug,
             title: post.title,
-            src: post.src
+            src: post.src,
+            alt: post.alt,
         }))
     };
 }

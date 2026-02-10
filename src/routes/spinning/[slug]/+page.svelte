@@ -13,11 +13,13 @@
 
     const srcInfo = data.post.src.split(".");
     const path = `/src/lib/assets/spinning/${srcInfo[0]}.${srcInfo[1]}`;
+    const altText = data.post.alt;
 
     const pageContext = {
         "image": images[path],
         "title": title,
-        "description": description
+        "description": description,
+        "alt": altText,
     };
 </script>
 <!-- description and image of proj -->
