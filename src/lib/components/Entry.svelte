@@ -123,7 +123,7 @@
 
         <div class="image-and-description">
             <div class={["entry-image", (imageAlign? "entry-imageRightAlign": "entry-imageLeftAlign")]}>
-                <img src={PageContext.image} style={`border: solid ${r(3, 10)}px ${complementaryColor};`} alt={PageContext.alt}/>
+                <img src={PageContext.image} style={`border: solid ${r(3, 10)}px ${complementaryColor};`} alt={PageContext.alt?PageContext.alt:"Invalid Alt Text"}/>
             </div>
             
             <div class={["entry-description", (imageAlign? "entry-textLeftAlign": "entry-textRightAlign")]}>

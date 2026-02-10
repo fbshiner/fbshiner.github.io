@@ -21,7 +21,7 @@ For each category (located in `src/routes/{category}`), there exists a file `dat
 You can add new images in that format anywhere in the `data.js` file, just make sure there is a , before the { and after the }. You can check 
 src/routes/knitting/data.js for an example of how this data is formatted in sequence.
 
-Note: I wrote alt text for all of the knitting entries, but I'm pretty inexperienced with knitting and writing alt text. I think it's a pretty good first pass, but could definitely be improved upon.
+Note: I wrote alt text for all of the knitting entries, but I'm pretty inexperienced with knitting and writing alt text. I think it's an okay first pass, but could definitely be improved upon.
 
 ## Text
 
