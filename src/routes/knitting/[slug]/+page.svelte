@@ -1,6 +1,7 @@
 <script>
     import Entry from "$lib/components/Entry.svelte";
-    
+    import {onMount} from 'svelte';
+
     let {data} = $props();
 
     const images = import.meta.glob("$lib/assets/knitting/*.{png,jpeg,jpg}", {
@@ -25,9 +26,6 @@
         "alt": altText,
         "link": link,
         "linkText": linkText,
-    }
-
-    
+    }    
 </script>
-<!-- description and image of proj -->
 <Entry PageContext={pageContext}></Entry>

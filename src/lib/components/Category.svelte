@@ -68,10 +68,6 @@
 
         const WIDTH = canvas.width;
         const HEIGHT = canvas.height;
-        const BACKGROUND = "#4bad62";
-        const FOREGROUND = "#c9feff";
-        const STROKE_WIDTH = 8;
-        const RADIUS = Math.min(WIDTH, HEIGHT);
 
         function clear() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -79,14 +75,6 @@
 
         const FPS = 10;
 
-        // ctx.fillStyle = FOREGROUND;
-        // ctx.strokeStyle = FOREGROUND;
-        // ctx.lineWidth = STROKE_WIDTH;
-        
-        let i = 0;
-        const totalSteps = 200;
-        
-        // const NUM_SHAPES = 20;
         const NUM_ROWS = 5;
         const NUM_COLS = 5;
         const PLACEMENT_RANGE = 5;
@@ -110,20 +98,13 @@
         }
 
         function frame() {
-            console.log(shapes);
             clear();
 
-            // IDEA: Draw multiple svg, don't scale but just have them jitter in place
-            const scale = i/totalSteps;
             shapes.forEach((shape) => {
                 const xJitter = Math.random() * JITTER_RANGE - (JITTER_RANGE/2);
                 const yJitter = Math.random() * JITTER_RANGE - (JITTER_RANGE/2);
                 ctx.drawImage(img, shape.x, shape.y, shape.length + xJitter, shape.length + yJitter);
             });
-
-            // ctx.drawImage(img, 0, 0, i, i);
-            // randomize 0,0 set i,i to CONSTANT + random(-RANGE, RANGE), CONSTANT + random(-RANGE, RANGE)
-            i = (i+1)%totalSteps;
 
             setTimeout(frame, 1000/FPS);
         }
@@ -131,8 +112,6 @@
         const img = new Image();
 
         img.onload = () => {
-            // console.log("Drawing......");
-            // ctx.drawImage(img, 0, 0, 200, 200);
             setTimeout(frame, 1000/FPS);
         };
 
