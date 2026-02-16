@@ -84,10 +84,10 @@
         const shapes = [];
         const JITTER_RANGE = 2;
 
-        for (let r = 0; r < NUM_ROWS; r++) {
+        for (let row = 0; row < NUM_ROWS; row++) {
             for (let c = 0; c < NUM_COLS; c++) {
-                const length = Math.random() * 50 + 25;
-                const x = r*WIDTH_SPACING + Math.random() * PLACEMENT_RANGE;
+                const length = r(25, 50);
+                const x = row*WIDTH_SPACING + Math.random() * PLACEMENT_RANGE;
                 const y = c*HEIGHT_SPACING + Math.random() * PLACEMENT_RANGE;
                 shapes.push({
                     "x": x,
@@ -147,7 +147,7 @@
 #svg-canvas {
     position: fixed;
     top: 7.5%;
-    left: -1%;
+    left: 5%;
     width: 100%;
     height: 100%;
     min-height: 100%;
