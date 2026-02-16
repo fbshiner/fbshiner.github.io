@@ -121,27 +121,11 @@
     }
 
     .svg-canvas-left {
-        position: fixed;
-        top: 7.5%;
-        left: 5%;
-        /* width: 100%; */
-        /* height: 100%; */
-        /* min-height: 100%; */
-        overflow: visible;
-        box-sizing: border-box;  
-        z-index: 1;
+        justify-self: flex-start;
     }
 
     .svg-canvas-right {
-        position: fixed;
-        top: 7.5%;
-        right: 0%;
-        /* width: 100%; */
-        /* height: 100%; */
-        /* min-height: 100%; */
-        overflow: visible;
-        box-sizing: border-box;  
-        z-index: 1;
+        justify-self: flex-end;
     }
 
     /* ========================================================================================================== */
@@ -214,7 +198,7 @@
         margin: 0 auto;
 
         display: grid;
-        grid-template-rows: 1fr 6fr 3fr;
+        grid-template-rows: 1fr 5fr 1fr 3fr;
         grid-template-columns: auto;
     }
 
@@ -277,9 +261,10 @@
                 {/if}
             </div>
         </div>
-    </div>
-    <canvas id="svg-canvas" class={imageAlign? "svg-canvas-left": "svg-canvas-right"}>
+        <canvas id="svg-canvas" class={imageAlign? "svg-canvas-left": "svg-canvas-right"}>
 
-    </canvas>
+        </canvas>
+    </div>
+
 
 </div>
