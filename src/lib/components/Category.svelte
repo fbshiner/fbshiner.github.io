@@ -75,8 +75,8 @@
 
         const FPS = 10;
 
-        const NUM_ROWS = 5;
-        const NUM_COLS = 5;
+        const NUM_ROWS = 3;
+        const NUM_COLS = 3;
         const PLACEMENT_RANGE = 5;
         const WIDTH_SPACING = (WIDTH)/NUM_ROWS;
         const HEIGHT_SPACING = (HEIGHT)/NUM_COLS;
