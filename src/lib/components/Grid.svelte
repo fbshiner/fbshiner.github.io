@@ -29,8 +29,8 @@
                 import: 'default'
             });
             break;
-        case "misc":
-            modules = import.meta.glob("$lib/assets/misc/*.{png,jpeg,jpg}", {
+        case "about":
+            modules = import.meta.glob("$lib/assets/about/*.{png,jpeg,jpg}", {
                 eager: true,
                 import: 'default'
             });
@@ -112,8 +112,8 @@
             <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/music/${src.split(".")[0]}.${src.split(".")[1]}`]} alt={alt?alt:"alt text not found"} style={`border: 3px solid ${borderColor}`}/></a>
         {:else if cwd === "spinning"}
             <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/spinning/${src.split(".")[0]}.${src.split(".")[1]}`]} alt={alt?alt:"alt text not found"} style={`border: 3px solid ${borderColor}`}/></a>
-        {:else if cwd === "misc"}
-            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/misc/${src.split(".")[0]}.${src.split(".")[1]}`]} alt={alt?alt:"alt text not found"} style={`border: 3px solid ${borderColor}`}/></a>
+        {:else if cwd === "about"}
+            <a href="./{cwd}/{slug}"><img src={modules[`/src/lib/assets/about/${src.split(".")[0]}.${src.split(".")[1]}`]} alt={alt?alt:"alt text not found"} style={`border: 3px solid ${borderColor}`}/></a>
         {/if}
         <br>
             <div class="grid-title"><b>{title}</b></div>

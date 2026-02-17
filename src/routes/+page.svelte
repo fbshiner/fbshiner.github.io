@@ -86,7 +86,7 @@
     <a href="./knitting">knitting</a>
     <a href="./music">music</a>
     <a href="./spinning">spinning</a>
-    <a href="./misc">misc</a>
+    <a href="./about">about</a>
 </div>
 
 <div class="page">

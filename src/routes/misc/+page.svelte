@@ -153,5 +153,3 @@
     <canvas id="svg-canvas">
     </canvas>
 </div>
-
-<!-- <Category data={data} cwd="misc"></Category> -->
