@@ -147,7 +147,11 @@
         </h1>
 
         <p>
-            TEST TEXT :)
+            Hello! My name is Francis, and I am passionate about wool and singing. 
+<br>
+            You can find my Instagram <a href="https://www.instagram.com/knitbutch/">here</a> and my Ravelry <a href="https://www.ravelry.com/people/knitbutch">here</a>. 
+<br>
+            My friend Jeff designed this website, and you can find them <a href="https://jblake05.github.io">here</a>. 
         </p>         
     </div>
     <canvas id="svg-canvas">
