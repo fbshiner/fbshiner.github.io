@@ -143,7 +143,7 @@
 <div class="fullscreen-container">
     <div class="page">
         <h1>
-            HEADER TEXT
+            Francis B Shiner
         </h1>
 
         <p>
