@@ -47,8 +47,8 @@
     }
 
     .navbar a {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 4%;
+        padding-right: 4%;
         font-size: larger;
         color: #000;
         transform: scale(1.0);

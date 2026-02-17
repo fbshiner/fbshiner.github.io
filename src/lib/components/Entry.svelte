@@ -140,7 +140,7 @@
 
             display: grid;
             grid-template-columns: auto;
-            grid-template-rows: 3fr 1fr;
+            grid-template-rows: 2fr 1fr;
             align-items: flex-start;
             text-align: center;
         }
@@ -213,6 +213,7 @@
     }
 
     .fullscreen-container {
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
