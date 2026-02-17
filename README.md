@@ -13,7 +13,7 @@ For each category (located in `src/routes/{category}`), there exists a file `dat
         "src": "name_of_image_in_assets.jpg", // could also be png or jpeg
         "description": "Description",
         "alt": "alt text for image",
-        "link": "link.com", // optional, shows a link
+        "link": "https://www.link.com", // optional, shows a link (MUST BE PREFIXED WITH HTTPS://)
         "linkText": "Text you click on to access the link", // optional, if not filed and out there is a link, the default text is "link"
         "musicFile": "music.mp3", // optional, provides an audio player at the bottom of the screen, only works in the music category
     },
