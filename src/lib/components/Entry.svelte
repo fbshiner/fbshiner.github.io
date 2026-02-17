@@ -120,6 +120,16 @@
         text-align: center;
     }
 
+    .entry-page {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-rows: 1fr 5fr 1fr 3fr;
+        grid-template-columns: auto;
+    }
+
     /* ========================================================================================================== */
     @media only screen and (max-width: 500px) {
         h1 {
@@ -204,16 +214,6 @@
         box-sizing: border-box;
     }
 
-    .entry-page {
-        width: 90%;
-        height: 100%;
-        margin: 0 auto;
-
-        display: grid;
-        grid-template-rows: 1fr 5fr 1fr 3fr;
-        grid-template-columns: auto;
-    }
-
     .entry-header {
         width: 100%;
         text-align: center;
@@ -273,9 +273,10 @@
                 {/if}
             </div>
         </div>
-        <canvas id="svg-canvas" class={imageAlign? "svg-canvas-left": "svg-canvas-right"}>
-
-        </canvas>
+        <div class="canvas-container">
+            <canvas id="svg-canvas" class={imageAlign? "svg-canvas-left": "svg-canvas-right"}>
+            </canvas>
+        </div>
     </div>
 
 
