@@ -126,7 +126,6 @@
         margin: 0 auto;
 
         display: grid;
-        grid-template-rows: 1fr 5fr 1fr 3fr;
         grid-template-columns: auto;
     }
 
@@ -141,26 +140,18 @@
 
             display: grid;
             grid-template-columns: auto;
-            grid-template-rows: 1fr 1fr;
-            align-items: center;
+            grid-template-rows: 3fr 1fr;
+            align-items: flex-start;
             text-align: center;
+        }
+
+        .link-and-player {
+            align-items: center;
         }
 
         img {
             max-width: 100%;
             height: auto;
-        }
-
-        .svg-canvas-left {
-            position: relative;
-            bottom: 50%;
-            left: 0%;
-        }
-
-        .svg-canvas-right {
-            position: relative;
-            bottom: 50%;
-            right: 0%;
         }
     }
 
@@ -191,22 +182,37 @@
             order: 1;
         }
 
-        .svg-canvas-left {
-            justify-self: flex-start;
-        }
-
-        .svg-canvas-right {
-            justify-self: flex-end;
-        }
-
         /* img {
             max-width: 100%;
             height: auto;
         } */
+        .fullscreen-container {
+            position: fixed;
+        }
+
+        .entry-page {
+            width: 80%;
+            grid-template-rows: 1fr 5fr 1fr 3fr;
+        }
+
+        .link-and-player {
+            align-items: flex-start;
+        }
+
+        .canvas-container {
+            display: grid;
+        }
+
+        .canvas-left {
+            justify-content: flex-start;
+        }
+
+        .canvas-right {
+            justify-content: flex-end;
+        }
     }
 
     .fullscreen-container {
-        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -226,7 +232,6 @@
         grid-template-rows: 1fr 1fr;
         grid-template-columns: auto;
         text-align: center;
-        align-items: flex-start;
     }
 
     audio {
@@ -273,8 +278,8 @@
                 {/if}
             </div>
         </div>
-        <div class="canvas-container">
-            <canvas id="svg-canvas" class={imageAlign? "svg-canvas-left": "svg-canvas-right"}>
+        <div class={["canvas-container", imageAlign? "canvas-left": "canvas-right"]}>
+            <canvas id="svg-canvas">
             </canvas>
         </div>
     </div>
